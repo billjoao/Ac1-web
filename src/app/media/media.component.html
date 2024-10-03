@@ -1,0 +1,30 @@
+<h2>Calcular media</h2>
+<input
+  type="number"
+  [(ngModel)]="AC1"
+  placeholder="nota da AC1"
+  class="form-control"
+/>
+<input
+  type="number"
+  [(ngModel)]="AC2"
+  placeholder="nota da AC2"
+  class="form-control"
+/>
+<input
+  type="number"
+  [(ngModel)]="AG"
+  placeholder="nota da AG"
+  class="form-control"
+/>
+<input
+  type="number"
+  [(ngModel)]="AF"
+  placeholder="nota da AF"
+  class="form-control"
+/>
+
+
+<p>Resultado: {{ resultado }}</p>
+
+<button class="btn btn-primary" (click)="calcular()">Calcular media</button>

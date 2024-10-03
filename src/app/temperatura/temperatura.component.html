@@ -1,0 +1,18 @@
+
+<div class="container mt-5">
+    <h2>Conversor de Temperatura</h2>
+    <form (ngSubmit)="converterTemperatura()" #temperaturaForm="ngForm">
+      <div class="mb-3">
+        <label for="celsius" class="form-label">Temperatura em Celsius (°C)</label>
+        <input type="number" id="celsius" class="form-control" [(ngModel)]="temperaturaCelsius" name="celsius" required>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Converter</button>
+    </form>
+  
+    <div *ngIf="temperaturaFahrenheit !== null && temperaturaKelvin !== null" class="mt-4">
+      <h3>Temperatura em Fahrenheit (°F): {{ temperaturaFahrenheit | number:'1.2-2' }}</h3>
+      <h3>Temperatura em Kelvin (K): {{ temperaturaKelvin | number:'1.2-2' }}</h3>
+    </div>
+  </div>
+  
